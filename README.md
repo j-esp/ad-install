@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c6575b2d-c357-4886-bae2-08ea505b3eed)![image](https://github.com/user-attachments/assets/2ca770bf-8a01-4af1-b09a-81fc89196c1b)
+![image](https://github.com/user-attachments/assets/2ca770bf-8a01-4af1-b09a-81fc89196c1b)
 
   <h1>Active Directory Installation in Azure</h1>
 This document outlines the steps taken to install Active Directory in Azure. The setup involves two VMs within the same virtual network: one VM will be configured as the domain controller with Active Directory, while the other will serve as the client for the next activity. <br />
