@@ -23,11 +23,8 @@ Before connecting to the VMs, it is crucial to assign a static IP address to the
 In the Azure portal, go to the domain controller VM's Networking tab. Click on the Network Interface and open IP configurations. Change the Allocation setting from dynamic to static and save the changes. This ensures that the domain controller's IP address remains the same.
 </p>
 
-![image](https://github.com/user-attachments/assets/33d7905f-a266-4587-9bf0-c0a397a22f8d)
+![image](https://github.com/user-attachments/assets/33d7905f-a266-4587-9bf0-c0a397a22f8d)![image](https://github.com/user-attachments/assets/485cd632-3f67-4f66-b983-d66af23ef10e)![image](https://github.com/user-attachments/assets/b2986cc3-ee7e-4b32-a63a-6f28c181df94)
 
-![image](https://github.com/user-attachments/assets/485cd632-3f67-4f66-b983-d66af23ef10e)
-
-![image](https://github.com/user-attachments/assets/b2986cc3-ee7e-4b32-a63a-6f28c181df94)
 <p>
 After configuring the static IP, log in to the client VM and test connectivity to the domain controller using the command ping <domain controller IP address> -t. Since the connection times out, it is imperative we enable ICMPv4 on the domain controller VM's firewall. Open Windows Defender Firewall by typing wf.msc in the search bar, navigate to Inbound Rules, and enable the Core Networking Diagnostics - ICMP Echo Request rules. Once these settings are applied, we can confirm that the ping command resolves without errors back on the client VM. 
 </p>
