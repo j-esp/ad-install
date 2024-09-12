@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2ca770bf-8a01-4af1-b09a-81fc89196c1b)
+![image](https://github.com/user-attachments/assets/c6575b2d-c357-4886-bae2-08ea505b3eed)![image](https://github.com/user-attachments/assets/2ca770bf-8a01-4af1-b09a-81fc89196c1b)
 
   <h1>Active Directory Installation in Azure</h1>
 This document outlines the steps taken to install Active Directory in Azure. The setup involves two VMs within the same virtual network: one VM will be configured as the domain controller with Active Directory, while the other will serve as the client for the next activity. <br />
@@ -32,7 +32,7 @@ In the Azure portal, go to the domain controller VM's Networking tab. Click on t
 After configuring the static IP, log in to the client VM and test connectivity to the domain controller using the command ping <domain controller IP address> -t. Since the connection times out, it is imperative we enable ICMPv4 on the domain controller VM's firewall. Open Windows Defender Firewall by typing wf.msc in the search bar, navigate to Inbound Rules, and enable the Core Networking Diagnostics - ICMP Echo Request rules. Once these settings are applied, we can confirm that the ping command resolves without errors back on the client VM. 
 </p>
   
-![image](https://github.com/user-attachments/assets/aff06a61-9fca-43c7-b7a0-3966f307627d)
+![image](https://github.com/user-attachments/assets/185c9667-1d84-4e72-a50a-2d2b57d66a03)
 ![image](https://github.com/user-attachments/assets/25a9f828-c167-4af8-ae16-711f93b59c38)
 
 To configure the server, begin by opening Server Manager and selecting "Add Roles and Features," then click "Next." Ensure you verify the private IP address of the domain controller's VM. Proceed to the "Server Roles" tab, choose "Active Directory Domain Services," click "Next," and complete the installation. Once the installation is finished, you need to promote the server to a domain controller. In Server Manager, click the warning icon under the flag to start the promotion process. Select "Add a new forest" and specify your domain name, which in my case is conjuring.com. Following these steps will set up and promote the server as a domain controller. 
